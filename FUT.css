@@ -1,6 +1,7 @@
     * {
         margin: 0 !important;
         padding: 0 !important;
+        font-family: antialiased ;
     }
 
     p {
@@ -17,15 +18,28 @@
         display: flex;
         align-items: center;
         height: 10vh;
-        font-size: 1.4vh;
+        font-size: 1.4vw;
     }
 
     .BareOfTitles {
         background-color: #040404;
-        
+
     }
-    .scrolable{
+
+    .scrolable {
         height: 100vh;
-        overflow-y: scroll ;
+        overflow-y: scroll;
         white-space: nowrap;
+    }
+
+    #SquadBuilderTitle {
+        height: 20vh;
+        font-size: 1.8vw;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+    #SquadBuilderTitle h3{
+        font-family: antialiased ;
+
     }
