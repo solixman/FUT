@@ -1,0 +1,31 @@
+    * {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    p {
+        color: aliceblue;
+        font-size: 0.7vw;
+    }
+
+    h3 {
+        font-size: larger;
+        color: aliceblue;
+    }
+
+    .PageName {
+        display: flex;
+        align-items: center;
+        height: 10vh;
+        font-size: 1.4vh;
+    }
+
+    .BareOfTitles {
+        background-color: #040404;
+        
+    }
+    .scrolable{
+        height: 100vh;
+        overflow-y: scroll ;
+        white-space: nowrap;
+    }
