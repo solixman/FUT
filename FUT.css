@@ -1,7 +1,7 @@
     * {
         margin: 0 !important;
         padding: 0 !important;
-        font-family: antialiased ;
+        font-family: antialiased;
     }
 
     p {
@@ -27,19 +27,31 @@
     }
 
     .scrolable {
-        height: 100vh;
+        height: 80vh;
         overflow-y: scroll;
         white-space: nowrap;
     }
+    .SquadBuilder h3{
+        font-size:  1.8vw;
+        font-family: antialiased;
+    }
 
-    #SquadBuilderTitle {
+    /* #SquadBuilder{
         height: 20vh;
         font-size: 1.8vw;
         display: flex;
         justify-content: center;
-        align-items: end;
-    }
-    #SquadBuilderTitle h3{
-        font-family: antialiased ;
 
     }
+    #SquadBuilderTitle{        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30vh;
+            font-size: 1.4vw;
+    }
+
+    #ForBG{
+        margin-top: 20vh;
+        background: url(./assets/https3A2F2Fcdn.png) no-repeat;
+    } */
