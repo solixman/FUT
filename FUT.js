@@ -129,4 +129,16 @@ function DisplayList(json) {
         `}
     });
 }
+function DisplaySquad(json) {
+    let SquadContainer = document.querySelector(".");
+    SquadContainer.innerHTML = "";
+
+
+
+}
+
+
+
+
+
 CallAPI()

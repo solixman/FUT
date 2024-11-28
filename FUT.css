@@ -35,6 +35,10 @@
         font-size:  1.8vw;
         font-family: antialiased;
     }
+    .PlayerCard{
+    background-image: url('/assets/badge_gold.webp');
+    background-repeat: no-repeat;
+    }
 
     /* #SquadBuilder{
         height: 20vh;
