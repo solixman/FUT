@@ -3,6 +3,7 @@ async function CallAPI() {
     let fetcher = await fetch(url);
     let json = await fetcher.json();
     DisplayList(json);
+    DisplaySquad(json);
 
 }
 
@@ -130,8 +131,13 @@ function DisplayList(json) {
     });
 }
 function DisplaySquad(json) {
-    let SquadContainer = document.querySelector(".");
+    let SquadContainer = document.querySelector(".PlayerCard");
     SquadContainer.innerHTML = "";
+    ListContainer.innerHTML += `
+
+     
+
+    `
 
 
 
