@@ -3,7 +3,7 @@ async function CallAPI() {
     let fetcher = await fetch(url);
     let json = await fetcher.json();
     DisplayList(json);
-    DisplaySquad(json);
+    DisplayCard(json);
 
 }
 
@@ -130,16 +130,23 @@ function DisplayList(json) {
         `}
     });
 }
-function DisplaySquad(json) {
-    let SquadContainer = document.querySelector(".PlayerCard");
+function DisplayCard(json) {
+    let SquadContainer = document.querySelectorAll(".PlayerCard");
     SquadContainer.innerHTML = "";
-    ListContainer.innerHTML += `
+    console.log(SquadContainer);
+    for (let i = 0; i < SquadContainer.length; i++) {
 
-     
+        SquadContainer[i].innerHTML=`
+       <div id="player${i}">
+       <div>
+        <button type="button" class="btn  bg-transparent" onclick="DisplayPlayerCard(json)">+</button>
+        </div>
+        </div>
+        `
+    }
+}
 
-    `
-
-
+function DisplayPlayerCard(json){
 
 }
 

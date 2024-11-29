@@ -38,6 +38,11 @@
     .PlayerCard{
     background-image: url('/assets/badge_gold.webp');
     background-repeat: no-repeat;
+    size: cover;
+    }
+
+    .TheSquad{
+ height: 70vh;
     }
 
     /* #SquadBuilder{
@@ -59,3 +64,14 @@
         margin-top: 20vh;
         background: url(./assets/https3A2F2Fcdn.png) no-repeat;
     } */
+
+    .PlayerCard{
+        width: 18%;
+       height: 10vh;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
