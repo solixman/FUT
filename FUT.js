@@ -2,8 +2,37 @@ async function CallAPI() {
     let url = "/FUT.json";
     let fetcher = await fetch(url);
     let json = await fetcher.json();
+    // console.log(json);
     DisplayList(json);
-    DisplayCard(json);
+    const form = document.getElementById('addPlayerForm');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); 
+  const formData = new FormData(form);
+  const obj = Object.fromEntries(formData); 
+
+  const newPlayer = {
+    name: obj.name,       
+    photo: obj.photo,      
+    position: obj.position, 
+    flag: obj.flag,         
+    logo: obj.logo,       
+    rating: obj.rating,  
+    pace: obj.pace,      
+    shooting: obj.shooting, 
+    passing: obj.passing,   
+    dribbling: obj.dribbling,
+    defending: obj.defending, 
+    physical: obj.physical 
+  };
+  json.players.push(newPlayer);
+   document.getElementById("addPlayerForm").reset();
+
+
+  DisplayList(json);
+   console.log(json);
+});
+
 
 }
 
@@ -13,7 +42,7 @@ function DisplayList(json) {
 
 
     json.players.forEach(players => {
-        if(players.position == "GK"){
+        if (players.position == "GK") {
             ListContainer.innerHTML += `
             <div class="row">
        <div class="row">
@@ -70,8 +99,8 @@ function DisplayList(json) {
    </div>
    </div>
 </div>
-       `} else{
-        ListContainer.innerHTML += `
+       `} else {
+            ListContainer.innerHTML += `
              <div class="row">
         <div class="row">
             <div class="col-md-1"></div>
@@ -130,28 +159,40 @@ function DisplayList(json) {
         `}
     });
 }
-function DisplayCard(json) {
-    let SquadContainer = document.querySelectorAll(".PlayerCard");
-    SquadContainer.innerHTML = "";
-    console.log(SquadContainer);
-    for (let i = 0; i < SquadContainer.length; i++) {
+// function DisplayCard(json) {
+//     let SquadContainer = document.querySelectorAll(".PlayerCard");
+//     SquadContainer.innerHTML = "";
+//     console.log(SquadContainer);
+//     for (let i = 0; i < SquadContainer.length; i++) {
 
-        SquadContainer[i].innerHTML=`
-       <div id="player${i}">
-       <div>
-        <button type="button" class="btn  bg-transparent" onclick="DisplayPlayerCard(json)">+</button>
-        </div>
-        </div>
-        `
-    }
+//         SquadContainer[i].innerHTML = `
+//        <div id="player${i}">
+//        <div>
+//         <button id="button${i}" type="button" class="btn  bg-transparent" onclick="DisplayPlayerCard(json)">+</button>
+//         </div>
+//         </div>
+//         `
+//     }
+// }
+
+
+function DisplayPlayerCard(json,i) {
+
+    let SingleContainer = document.getElementById(`button${i}`)
+    SingleContainer.innerHTML = "";
+    SingleContainer.innerHTML = `
+    skjbkbtgkhgbkgthgbtkghbtg
+    `;
+  
 }
 
-function DisplayPlayerCard(json){
 
-}
+// const form = document.getElementById('addPèlayerForm');
 
-
-
-
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault(); 
+//   const formData = new FormData(form);
+//   const obj = Object.fromEntries(formData); 
+// });
 
 CallAPI()

@@ -67,11 +67,14 @@
 
     .PlayerCard{
         width: 18%;
-       height: 10vh;
+       height: 17vh;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    label{
+        color: white;
     }
     
