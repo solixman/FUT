@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="FUT.css">
+</head>
+
+<body
+    style=" background-image: url('/assets/stadium_background.webp'); width: 100%; height: 100%; background-repeat: no-repeat;  background-size: cover;">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-11">
+                    <div class="PageName">
+                        <h3>Players List</h3>
+                    </div>
+                    <div class="row">
+
+                        <div class="container-fluid">
+
+                            <div class="BareOfTitles">
+                                <div class="row">
+                                    <div class="col-md-12 px-lg-3">
+                                        <div class="row px-md-2 py-lg-3">
+                                            <div class="col-md-4">
+                                                <P>PLAYER
+                                                    (GK)</P>
+                                            </div>
+
+                                            <div class="col-md-8">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-md-3 d-flex justify-content-center">
+                                                                <p>RAT
+                                                            </div>
+                                                            <div class="col-md-3 d-flex justify-content-center">
+                                                                <p>POS
+                                                            </div>
+                                                            <div class="col-md-3 d-flex justify-content-center">
+                                                                <p>PAC
+                                                                    (DIV)
+                                                            </div>
+                                                            <div class="col-md-3 d-flex justify-content-center">
+                                                                <p>SHO
+                                                                    (KIC)
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-md-11">
+                                                                <div class="row  d-flex justify-content-center">
+                                                                    <div class="col-md-3 d-flex justify-content-center">
+                                                                        <p>PAS
+                                                                            (REF)
+                                                                    </div>
+                                                                    <div class="col-md-3 d-flex justify-content-center">
+                                                                        <p>DRI
+                                                                            (SPD)
+                                                                    </div>
+                                                                    <div class="col-md-3 d-flex justify-content-center">
+                                                                        <p>DEF
+                                                                            (POS)
+                                                                    </div>
+                                                                    <div class="col-md-3 d-flex justify-content-center">
+                                                                        <p>PHY
+                                                                            (HNDL)</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="recipient-name"
+                                                            class="col-form-label">Recipient:</label>
+                                                        <input type="text" class="form-control" id="recipient-name">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="message-text"
+                                                            class="col-form-label">Message:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Send message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="scrolable">
+
+                    <div class="Thelist"></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+            <div class="SquadBuilder">
+                <div class="SquadBuilderTytle"
+                    style="height: 20vh; display: flex; justify-content: center; align-items: end;">
+                    <h3>Squad Builder</h3>
+                </div>
+
+
+                <div
+                    style=" background-image: url('/assets/https3A2F2Fcdn.png'); background-size: 100% 100%; background-repeat: no-repeat ;">
+
+                    <div class="TheSquad"
+                        style=" display: flex; flex-direction: column; justify-content: space-around;">
+
+
+
+                        <div class="row">
+
+                            <div class="firstRow d-flex justify-content-evenly">
+                                <div class="PlayerCard">
+                                    <div id="player${i}">
+                                        <div>
+                                            <button id="button${i}" type="button" class="btn  bg-transparent"
+                                                onclick="DisplayPlayerCard(json)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="PlayerCard">
+                                    <div id="player${i}">
+                                        <div>
+                                            <button id="button${i}" type="button" class="btn  bg-transparent"
+                                                onclick="DisplayPlayerCard(json)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="firstRow d-flex  justify-content-evenly">
+                                <div class="PlayerCard">
+                                    <div id="player${i}">
+                                        <div>
+                                            <button id="LW" type="button" class="btn  bg-transparent"
+                                                onclick="DisplayPlayerCard(json)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="PlayerCard">
+                                    <div id="CM">
+                                        <div>
+                                            <button id="button${i}" type="button" class="btn  bg-transparent"
+                                                onclick="DisplayPlayerCard(json)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="PlayerCard">
+                                    <div id="LW">
+                                        <div>
+                                            <button id="button${i}" type="button" class="btn  bg-transparent"
+                                                onclick="DisplayPlayerCard(json)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="firstRow d-flex  justify-content-evenly">
+                                <div class="PlayerCard">
+                                    <div id="LB">
+                                        <div>
+                                            <button id="button${i}" type="button" class="btn  bg-transparent"
+                                                onclick="DisplayPlayerCard(json)">+</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="PlayerCard">
+                                    <div id="CB">
+                                        <div>
+                                            <button id="button${i}" type="button" class="btn  bg-transparent"
+                                                onclick="DisplayPlayerCard(json)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="PlayerCard">
+                                    <div id="CB">
+                                        <div>
+                                            <button id="button${i}" type="button" class="btn  bg-transparent"
+                                                onclick="DisplayPlayerCard(json)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="PlayerCard">
+                                    <div id="CB">
+                                        <div>
+                                            <button id="button${i}" type="button" class="btn  bg-transparent"
+                                                onclick="DisplayPlayerCard(json)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="PlayerCard">
+                                    <div id="LB">
+                                        <div>
+                                            <button id="button${i}" type="button" class="btn  bg-transparent"
+                                                onclick="DisplayPlayerCard(json)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="firstRow d-flex  justify-content-evenly">
+                                <div class="PlayerCard">
+                                    <div id="GK">
+                                        <div>
+                                            <button id="button${i}" type="button" class="btn  bg-transparent"
+                                                onclick="DisplayPlayerCard(json)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="AddPlayer">
+
+        <h1>Add a player</h1>
+        <form id="addPlayerForm" >
+        <div class="row">
+            <div class="col-md-4">
+                <label for="PlayerFlag" class="form-label">name</label>
+                <input class="form-control" type="text" name="name" placeholder="player's name" aria-label="default input example">
+
+            </div>
+            <div class="col-md-4">
+                <label for="PlayerPhoto" class="form-label">photo</label>
+                <input class="form-control" type="text" name="photo" placeholder="URL" aria-label="default input example">
+
+            </div>
+            <div class="col-md-4">
+                <label for="PlayerFlag" class="form-label">country flag</label>
+                <input class="form-control" type="text"  name="flag" placeholder="URL" aria-label="default input example">
+
+            </div>
+            
+
+            <div class="col-md-1">
+                <label for="PlayerPosition" class="form-label">position</label>
+                <input class="form-control" type="text"  name="position" placeholder="(XX)" aria-label="default input example">
+            </div>
+            <div class="col-md-1">
+                <label for="PlayerPosition" class="form-label">ranking</label>
+                <input class="form-control" type="text"  name="rating" placeholder="(nn)" aria-label="default input example">
+            </div>
+            <div class="col-md-1">
+                <label for="PlayerPace" class="form-label">pace(div)</label>
+                <input class="form-control" type="text"  name="pace" placeholder="(nn)" aria-label="default input example">
+            </div>
+            <div class="col-md-1">
+                <label for="PlayerShooting" class="form-label">shooting(kic)</label>
+                <input class="form-control" type="text"  name="shooting" placeholder="(nn)" aria-label="default input example">
+            </div>
+            <div class="col-md-1">
+                <label for="PlayerPassing" class="form-label">passing(ref)</label>
+                <input class="form-control" type="text"  name="passing" placeholder="(nn)" aria-label="default input example">
+            </div>
+            <div class="col-md-1">
+                <label for="PlayerDriblling" class="form-label">dribbling(spe)</label>
+                <input class="form-control" type="text"  name="dribbling" placeholder="(nn)" aria-label="default input example">
+            </div>
+            <div class="col-md-1">
+                <label for="PlayerDefending" class="form-label">defending(pos)</label>
+                <input class="form-control" type="text"  name="defending" placeholder="(nn)" aria-label="default input example">
+            </div>
+            <div class="col-md-1">
+                <label for="PlayerPhysycal" class="form-label">Physical(han)</label>
+                <input class="form-control" type="text" name="Physical" placeholder="(nn)" aria-label="default input example">
+            </div>
+            <div class="col-md-4">
+                <label for="PlayerPhoto" class="form-label">team logo photo</label>
+                <input class="form-control" type="text" name="logo" placeholder="URL" aria-label="default input example">
+
+            </div>
+        </div>
+        <div class="SubmitButton">
+        <button type="submit" >Add a player</button>
+        </div>
+    </div>
+</form>
+    <!-- <div class="row">
+                <div class="col-md-12">
+                    <div class="SquadBuilderTitle">
+                        <h3>Squad Builder</h3>
+                    </div>
+                    <div class="row h-100">
+                        <div class="d-flex align-items-center justify-content-center">
+                        <div class="SquadBuildingDiv d-flex justify-content-center align-items-center">
+                            <div class="ForBG" style=" background-image: url('/assets/https3A2F2Fcdn.png'); height: 90vh;  width:  80vh; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div> -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/FUT.js"></script>
+</body>
+
+</html>
