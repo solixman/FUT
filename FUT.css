@@ -30,6 +30,7 @@
         height: 80vh;
         overflow-y: scroll;
         white-space: nowrap;
+        scrollbar-color: black;
     }
     .SquadBuilder h3{
         font-size:  1.8vw;
@@ -77,4 +78,41 @@
     label{
         color: white;
     }
-    
+
+    input{
+        height: 4vh;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .AddPlayer h1{
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        font-family: antialiased;
+    }
+    .AddPlayer button{
+        font-size: 2vh;
+        color: #040404;
+       background-color: aquamarine;
+       height: 5vh;
+       width: 8vw;
+      border-radius: 10px;
+    }
+    /* .addPlayerForm{
+     display: flex;
+     justify-content: space-around;
+    } */
+     .form-control{
+        width: 95%;
+     }
+    .SubmitButton{
+        height: 10dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .TheList{
+        scrollbar-color: black;
+
+    }

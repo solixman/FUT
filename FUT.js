@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) => {
     passing: obj.passing,   
     dribbling: obj.dribbling,
     defending: obj.defending, 
-    physical: obj.physical 
+    physical: obj.physical
   };
   json.players.push(newPlayer);
    document.getElementById("addPlayerForm").reset();

@@ -270,21 +270,21 @@
 
     <div class="AddPlayer">
 
-        <h3>Add a player</h3>
-        <form id="addPlayerForm">
+        <h1>Add a player</h1>
+        <form id="addPlayerForm" >
         <div class="row">
             <div class="col-md-4">
-                <a>Player's name</a>
+                <label for="PlayerFlag" class="form-label">name</label>
                 <input class="form-control" type="text" name="name" placeholder="player's name" aria-label="default input example">
 
             </div>
             <div class="col-md-4">
-                <label for="PlayerPhoto" class="form-label">Player's photo</label>
+                <label for="PlayerPhoto" class="form-label">photo</label>
                 <input class="form-control" type="text" name="photo" placeholder="URL" aria-label="default input example">
 
             </div>
             <div class="col-md-4">
-                <label for="PlayerFlag" class="form-label">Player's country flag</label>
+                <label for="PlayerFlag" class="form-label">country flag</label>
                 <input class="form-control" type="text"  name="flag" placeholder="URL" aria-label="default input example">
 
             </div>
@@ -328,7 +328,9 @@
 
             </div>
         </div>
-        <button type="submit" class="btn btn-primary mb-3">Add a player</button>
+        <div class="SubmitButton">
+        <button type="submit" >Add a player</button>
+        </div>
     </div>
 </form>
     <!-- <div class="row">
